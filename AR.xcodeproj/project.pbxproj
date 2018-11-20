@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D96FAACD21A3FB43000C84F0 /* SolarScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = D96FAACC21A3FB43000C84F0 /* SolarScene.scn */; };
 		D994BB1B21A3F6D900630C8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D994BB1A21A3F6D900630C8F /* AppDelegate.swift */; };
 		D994BB1D21A3F6D900630C8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D994BB1C21A3F6D900630C8F /* ViewController.swift */; };
 		D994BB2021A3F6D900630C8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D994BB1E21A3F6D900630C8F /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D96FAACC21A3FB43000C84F0 /* SolarScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = SolarScene.scn; sourceTree = "<group>"; };
 		D994BB1721A3F6D900630C8F /* AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D994BB1A21A3F6D900630C8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D994BB1C21A3F6D900630C8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		D994BB0E21A3F6D900630C8F = {
 			isa = PBXGroup;
 			children = (
+				D96FAACC21A3FB43000C84F0 /* SolarScene.scn */,
 				D994BB1921A3F6D900630C8F /* AR */,
 				D994BB2E21A3F6DD00630C8F /* ARTests */,
 				D994BB3921A3F6DD00630C8F /* ARUITests */,
@@ -229,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D96FAACD21A3FB43000C84F0 /* SolarScene.scn in Resources */,
 				D994BB2521A3F6DC00630C8F /* LaunchScreen.storyboard in Resources */,
 				D994BB2221A3F6DC00630C8F /* Assets.xcassets in Resources */,
 				D994BB2021A3F6D900630C8F /* Main.storyboard in Resources */,
