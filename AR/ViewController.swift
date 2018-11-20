@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     
     lazy var sunNode: SCNNode = {
        
-        let geometry = SCNSphere(radius: 500)
+        let geometry = SCNSphere(radius: 0.1)
         let result =  SCNNode(geometry: geometry)
         result.position = SCNVector3Make(0, 0, 0)
         return result
@@ -54,12 +54,6 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         
         view.addSubview(arSceneView)
-        
-//        view.addSubview(sceneView)
-//        sceneView.autoenablesDefaultLighting = true
-//
-//        sceneView.scene = SCNScene()
-//        sceneView.scene?.rootNode.addChildNode(sunNode)
         
         arSceneView.debugOptions = [.showWorldOrigin]
 
