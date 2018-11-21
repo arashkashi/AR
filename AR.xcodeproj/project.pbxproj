@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D96FAACD21A3FB43000C84F0 /* SolarScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = D96FAACC21A3FB43000C84F0 /* SolarScene.scn */; };
+		D96FAB4B21A558BB000C84F0 /* PipelineHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96FAB4A21A558BA000C84F0 /* PipelineHelper.swift */; };
 		D994BB1B21A3F6D900630C8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D994BB1A21A3F6D900630C8F /* AppDelegate.swift */; };
 		D994BB1D21A3F6D900630C8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D994BB1C21A3F6D900630C8F /* ViewController.swift */; };
 		D994BB2021A3F6D900630C8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D994BB1E21A3F6D900630C8F /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		D96FAACC21A3FB43000C84F0 /* SolarScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = SolarScene.scn; sourceTree = "<group>"; };
+		D96FAB4A21A558BA000C84F0 /* PipelineHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineHelper.swift; sourceTree = "<group>"; };
 		D994BB1721A3F6D900630C8F /* AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D994BB1A21A3F6D900630C8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D994BB1C21A3F6D900630C8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				D994BB2121A3F6DC00630C8F /* Assets.xcassets */,
 				D994BB2321A3F6DC00630C8F /* LaunchScreen.storyboard */,
 				D994BB2621A3F6DC00630C8F /* Info.plist */,
+				D96FAB4A21A558BA000C84F0 /* PipelineHelper.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D994BB1D21A3F6D900630C8F /* ViewController.swift in Sources */,
+				D96FAB4B21A558BB000C84F0 /* PipelineHelper.swift in Sources */,
 				D994BB1B21A3F6D900630C8F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
