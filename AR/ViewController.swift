@@ -71,6 +71,18 @@ class ViewController: UIViewController {
         
         let configuration = ARWorldTrackingConfiguration()
         arSceneView.session.run(configuration)
+        
+        let button = UIButton(frame: CGRect(x: 10, y: 10, width: 44, height: 44))
+        button.backgroundColor = .white
+        self.view.addSubview(button)
+        button.addTarget(self, action: #selector(onButtonTapped), for: .touchUpInside)
+    }
+    
+    var isImageCaptureEnabled: Bool = false
+    
+    @objc func onButtonTapped() {
+        
+        isImageCaptureEnabled = !isImageCaptureEnabled
     }
     
     private var currentTime: TimeInterval?
@@ -107,6 +119,8 @@ extension ViewController: ARSCNViewDelegate {
         
         earthNode.position = SCNVector3Make(earthX, 0.0, earchZ)
         moonNode.position = SCNVector3Make(moonX, 0.0, moonZ)
+        
+        if isImageCaptureEnabled == false { return }
         
         if let frame = arSceneView.session.currentFrame?.capturedImage {
             
