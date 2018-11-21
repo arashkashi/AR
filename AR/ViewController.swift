@@ -108,7 +108,6 @@ extension ViewController: ARSCNViewDelegate {
         earthNode.position = SCNVector3Make(earthX, 0.0, earchZ)
         moonNode.position = SCNVector3Make(moonX, 0.0, moonZ)
         
-        
         if let frame = arSceneView.session.currentFrame?.capturedImage {
             
             first.enqueueInput(item: frame)

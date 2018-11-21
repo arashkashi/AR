@@ -15,9 +15,10 @@ class ProcessBlock<InputT, OutputT> {
     
     private var inputQueue: [InputT] = []
     private var inputQueueDispatchQueue: DispatchQueue = DispatchQueue(label: "Input operation Queue")
-    private var processDispatchQueue: DispatchQueue = DispatchQueue(label: "Process Queue")
+    private var processDispatchQueue: DispatchQueue = DispatchQueue(label: "Process Queue", qos: DispatchQoS.background, attributes: [], autoreleaseFrequency: DispatchQueue.AutoreleaseFrequency.never, target: nil)
     
     func process(item: InputT) -> OutputT {
+
         fatalError("pending implementation on subclass")
     }
     
@@ -111,15 +112,14 @@ class PixelBufferToDataProcessBlock: ProcessBlock<CVPixelBuffer, Data> {
     
     lazy var context: CIContext = {
         
-        return CIContext() //(mtlDevice: device)
+        return CIContext(mtlDevice: device)
     }()
     
     override func process(item: CVPixelBuffer) -> Data {
         
         let ciImage = CIImage(cvPixelBuffer: item)
         
-        let context = CIContext(mtlDevice: device)
-        return context.jpegRepresentation(of: ciImage, colorSpace:  ciImage.colorSpace!, options: [:])!
+        return  context.jpegRepresentation(of: ciImage, colorSpace:  ciImage.colorSpace!, options: [:])!
     }
 }
 
@@ -140,4 +140,13 @@ class JpegDataToDiskProcessBlock: ProcessBlock<Data, Int> {
         
         return 1
     }
+}
+
+func printPerformance(name: String, block: () -> ()) {
+    let start = DispatchTime.now()
+    block()
+    let end = DispatchTime.now()
+    
+    let mili = (end.uptimeNanoseconds - start.uptimeNanoseconds) / 1000000
+    print("\(name): \(mili)")
 }
